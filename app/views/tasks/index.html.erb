@@ -7,7 +7,7 @@
         <li><%= link_to(task.title, task_path(task)) %></li>
       </label>
     </div>
-  <% end %>
+<p><%= link_to 'Delete task', task_path(task), method: :delete, data: { confirm: 'Are you sure?' } %></p>  <% end %>
 </ul>
 
 <%= link_to 'Add a new task', tasks_new_path %>
